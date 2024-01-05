@@ -1,0 +1,626 @@
+/* Reset some default styles */
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+.header {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logoBox, .menuBox {
+    margin: 0 50px;
+}
+
+.logoBox
+{
+    color: #ec3b3b;
+}
+
+nav a {
+    margin-right: 20px;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #ec3b3b;
+}
+
+.logoBox span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4e4a4a;
+}
+
+/* Home Section */
+.home {
+    margin-top: 80px;
+    height: 650px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: url(images/home-bg.jpg) center/cover no-repeat;
+}
+
+.leftSide {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.leftSide h1 {
+    font-size: 48px;
+    color: #181717;
+    margin-bottom: 10px;
+}
+
+.leftSide p {
+    font-size: 18px;
+    color: #2c2b2b;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border: 2px solid red;
+    color: red;
+    border-radius: 6px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    box-shadow: 1px 1px 2px red;
+    height: 45px;
+    width: 130px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: white;
+    background-color: red;
+}
+
+.rightSide img {
+    width: 90%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.rightSide img:hover {
+    transform: scale(1.05);
+}
+
+/* Speciality Section */
+.Speciality {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.Section_Content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.Section_Title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: #4e4a4a;
+}
+
+.box h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Speciality .box {
+    width: 27%;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #636060;
+    box-shadow: 3px 3px 15px #b4aeae;
+}
+
+.Speciality .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.Section_Title span, .Section_Title h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.CoverImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.box:hover .CoverImage {
+    opacity: 1;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.box:hover .img {
+    transform: translateY(0);
+}
+
+/* Popular Section */
+.Popular {
+    margin-top: 30px;
+}
+
+.Popular .box {
+    width: 27%;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    position: relative;
+    border: 1px solid #636060;
+    box-shadow: 3px 3px 15px #b4aeae;
+}
+
+.img1 {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.Popular_box {
+    padding: 20px;
+}
+
+.Popularbtn {
+    margin-top: 20px;
+    background: white;
+    border: 2px solid red;
+    color: red;
+    border-radius: 6px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 1px 1px 2px red;
+    height: 45px;
+    width: 160px;
+    cursor: pointer;
+}
+
+.Popularbtn:hover {
+    color: white;
+    background-color: red;
+}
+
+.Stars {
+    color: gold;
+    font-size: 20px;
+}
+
+.price {
+    background-color: red;
+    color: white;
+    width: 85px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+/* Process Section */
+.Process {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Process_Content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+    font-size: 29px;
+}
+
+.steps {
+    width: 23%;
+}
+
+.steps img {
+    border-radius: 50%;
+    border: 15px solid #fff;
+    box-shadow: 3px 3px 15px #b4aeae;
+}
+
+.Process_Content h3 {
+    color: #4e4a4a;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Gallery Section */
+.Galary {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.Galary .box {
+    width: 25%;
+    height: 270px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 9px solid #fffbfb;
+    box-shadow: 3px 3px 15px #b4aeae;
+}
+
+.Galary .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.gimg {
+    width: 100%;
+    height: 100%;
+}
+
+.CoverText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 20px;
+    color: #000000;
+    background-color: rgba(200, 169, 200, 0.5);
+}
+
+.box:hover .CoverText {
+    opacity: 1;
+}
+
+/* Review Section */
+.reviewbox {
+    padding-top: 20px;
+    border: 10px solid #fff;
+    width: 26%;
+    height: 240px;
+    background-color: #464343;
+    position: relative;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 3px 3px 15px #b4aeae;
+    color: #fff;
+}
+
+.profileImage {
+    position: absolute;
+    top: -57px;
+    left: calc(50% - 60px);
+}
+
+.reviewbox img {
+    width: 120px;
+    border-radius: 50%;
+    border: 15px solid #fff;
+    box-shadow: 2px 2px 2px #b4aeae;
+}
+
+.reviewbox h2 {
+    margin-top: 70px;
+}
+
+.reviewbox p {
+    margin-top: 15px;
+}
+
+.rstars {
+    color: red;
+}
+
+.reviewSection_Title {
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 20px;
+    color: #4d4d4d;
+}
+
+/* Order Section */
+.imgbox {
+    width: 35%;
+}
+
+.form {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.imgbox img {
+    width: 100%;
+    height: 400px;
+}
+
+.order_content {
+    background-color: white;
+    box-shadow: 1px 1px 6px #b4aeae;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+}
+
+.Controlsbox {
+    width: 49%;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    border: 2px solid lightgray;
+}
+
+
+
+.Controlsboxarea {
+    width: 50%;
+}
+
+.orderbtn {
+    margin-top: 180px;
+    background: white;
+    border: 2px solid red;
+    color: red;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+    box-shadow: 1px 1px 2px red;
+    height: 45px;
+    width: 160px;
+    cursor: pointer;
+}
+
+.orderbtn:hover {
+    color: white;
+    background-color: red;
+}
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.fbtn {
+    background-color: #000;
+    border: 2px solid red;
+    color: red;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+    box-shadow: 1px 1px 2px red;
+    height: 45px;
+    width: 160px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.fbtn:hover {
+    color: #fff;
+    background-color: #f00;
+}
+
+.txt {
+    color: white;
+}
+
+.txt b {
+    color: red;
+}
+
+h2 span
+{
+    color: #fc1919;
+}
+
+
+:root {
+    --highlight-bg: red;
+    --highlight-text: white;
+    --highlight-red-bg: black;
+  }
+
+
+@media (min-width: 390px) and (max-width: 480px) {
+
+    body {
+        overflow-x: hidden;
+    }
+    /* Header */
+    .header {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+    .logoBox, .menuBox {
+        margin: 10px 0;
+        
+    }
+
+    nav a {
+        margin-right: 6px;
+        font-size: 18px;
+    }
+
+    /* Home Section */
+    .home {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .leftSide h1 {
+        font-size: 30px;
+    }
+
+    .leftSide p {
+        font-size: 14px;
+    }
+
+    .btn {
+        width: auto;
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .rightSide img {
+        width: 100%;
+    }
+
+    /* Speciality Section */
+    .Speciality .box {
+        width: 46%;
+        margin-bottom: 20px;
+       
+    }
+
+    .Section_Content
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Popular Section */
+    .Popular .box {
+        width: 46%;
+        margin-bottom: 20px;
+    }
+
+    .price {
+        top: 15px;
+        left: 15px;
+    }
+
+    .Section_Content
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Process Section */
+    .Process_Content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        font-size: 16px;
+       
+    }
+    .steps
+    {
+        width: 46%;
+    }
+
+    .Galary .Section_Content .box
+    {
+        width: 46%;
+    }
+    
+    .CoverText
+    {
+        font-size: 15px;
+    }
+
+    /* Gallery Section */
+    .Galary .box {
+        width: 100%;
+        height: 180px;
+        margin-bottom: 20px;
+    }
+
+    /* Review Section */
+    .reviewbox {
+        width: 100%;
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    .profileImage {
+        top: -30px;
+        left: calc(50% - 50px);
+    }
+
+    /* Order Section */
+    .imgbox, .Controlsbox, .Controlsboxarea {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer {
+        width: 100%;
+        height: auto;
+    }
+}
